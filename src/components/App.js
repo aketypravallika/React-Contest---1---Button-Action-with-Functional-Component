@@ -2,9 +2,9 @@ import React, {Component, useState} from "react";
 import "./../styles/App.css";
 
 function App() {
-  const [isclick,clicked]=useState(false);
+  const [click,setclicked]=react.useState(false);
   function handleClick(){
-  clicked(true);
+  setclicked(true);
   }
   return (
     <div id="main">
@@ -12,7 +12,7 @@ function App() {
 		click
 		</button>
     {
-    isclick ?(<p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>)
+    click &&(<p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>)
     }
     
     </div>
